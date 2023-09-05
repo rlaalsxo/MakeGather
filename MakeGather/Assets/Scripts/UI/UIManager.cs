@@ -69,6 +69,7 @@ public class UIManager : MonoBehaviour, IPointerDownHandler
         {
             GameManager.instance.Player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = eventData.pointerEnter.gameObject.GetComponent<Image>().sprite;
             GameManager.instance.Player.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = StartManager.instance.playerAnimator.Where(name => name.name == eventData.pointerEnter.gameObject.GetComponent<Image>().sprite.name).FirstOrDefault();
+            selectchararter.gameObject.SetActive(false);
         }
         else
         {
@@ -119,6 +120,7 @@ public class UIManager : MonoBehaviour, IPointerDownHandler
         {
             Debug.Log("적용할 수 없는 이름입니다.");
         }
+        changename.text = " ";
         namechangeimage.gameObject.SetActive(false);
     }
     public void OpenTalk()
@@ -138,5 +140,6 @@ public class UIManager : MonoBehaviour, IPointerDownHandler
     {
         showtext = Instantiate<TextMeshProUGUI>(Usetext, talkspace.transform, false);
         showtext.text = chat.text;
+        chat.text = " ";
     }
 }

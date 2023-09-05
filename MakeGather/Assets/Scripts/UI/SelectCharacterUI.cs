@@ -19,6 +19,7 @@ public class SelectCharacterUI : MonoBehaviour, IPointerDownHandler
         if(eventData.pointerEnter.gameObject.name == "SelectPlayer")
         {
             playerImage.sprite = eventData.pointerEnter.gameObject.GetComponent<Image>().sprite;
+            SelectImage.gameObject.SetActive(false);
         }
     }
     public void OpenUI()

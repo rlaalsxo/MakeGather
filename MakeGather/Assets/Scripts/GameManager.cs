@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public TextMeshProUGUI PlayerName;
+    public TextMeshProUGUI now;
     public Transform PlayerNamePos;
     public Transform ChatPos;
     [SerializeField] public GameObject Player;
@@ -19,8 +21,8 @@ public class GameManager : MonoBehaviour
         PlayerName.transform.position = Camera.main.WorldToScreenPoint(PlayerNamePos.position);
         Player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = StartManager.instance.character;
     }
-    private void Update()
+    private void LateUpdate()
     {
-        
+        now.text = DateTime.Now.ToString("HH : mm");
     }
 }

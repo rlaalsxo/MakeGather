@@ -24,7 +24,7 @@ https://drive.google.com/file/d/1lERRd3jn2Z3rTZt6CuL9iCwrqTgjFcXA/view?usp=shari
 ![게임 씬](https://github.com/rlaalsxo/MakeGather/assets/100994140/d18d621c-43d1-4935-b1c4-fa4b1a76afde)
 - 게임 씬 입니다. 그리드를 이용하여 씬을 만들었습니다.
 - 벽은 collider 컴포넌트를 추가하여 넘어가지 못하게 하였습니다.
-- 각각의 UI들은 이름대로 캐릭터 변경, 이름 변경, 유저 이름 표시를 해두었으며 껐다 켰다 할 수 있습니다.
+- 하단의 UI버튼들은 왼쪽부터 캐릭터 변경, 이름 변경, 유저 관리를 해두었으며 껐다 켰다 할 수 있습니다.
 - 왼쪽 상단에는 현재 시각이 표시되도록 하였습니다.
 
 # NPC대화

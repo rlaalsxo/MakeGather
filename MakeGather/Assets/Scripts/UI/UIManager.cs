@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour, IPointerDownHandler
         {
             Debug.Log("적용할 수 없는 이름입니다.");
         }
-        changename.text = " ";
+        changename.text = string.Empty;
         namechangeimage.gameObject.SetActive(false);
     }
     public void OpenTalk()
@@ -140,6 +140,6 @@ public class UIManager : MonoBehaviour, IPointerDownHandler
     {
         showtext = Instantiate<TextMeshProUGUI>(Usetext, talkspace.transform, false);
         showtext.text = chat.text;
-        chat.text = " ";
+        chat.text = string.Empty;
     }
 }
